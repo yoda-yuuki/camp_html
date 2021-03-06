@@ -1,0 +1,52 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #f6f0cc;
+}
+.container {
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/pi-ko/op5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 50px;
+}
+.memoryGame {
+  width: 1240px;
+  height: 640px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 140px;
+  height: 180px;
+  margin: 5px;
+  position: relative;
+  box-shadow: gray 2px 2px;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+.card:active {
+  transform: scale(0.5);
+  transition: transform 0.2s;
+}
+.card.flip {
+  transform: rotateY(180deg);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.back,
+.front {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+}
